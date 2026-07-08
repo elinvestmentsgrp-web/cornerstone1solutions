@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cornerstone One Solutions | Professional Staffing & Workforce Solutions</title>
+
+<meta name="description" content="Cornerstone One Solutions provides professional staffing, workforce management, recruiting, utility staffing and industrial staffing throughout Georgia.">
+
+<meta name="keywords" content="Staffing, Recruiting, Workforce Solutions, Georgia Staffing, Utility Staffing, Construction Staffing">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Open Sans',sans-serif;
+background:#f5f7fa;
+color:#333;
+line-height:1.6;
+
+}
+
+/* COLORS
+
+Navy #0B1F3A
+
+Gray #63666A
+
+Gold #C9A227
+
+White #FFFFFF
+
+*/
+
+:root{
+
+--navy:#0B1F3A;
+--gray:#63666A;
+--gold:#C9A227;
+--light:#F5F7FA;
+--white:#FFFFFF;
+
+}
+
+img{
+
+max-width:100%;
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+.container{
+
+width:90%;
+max-width:1400px;
+margin:auto;
+
+}
+
+/* ===================================
+
+HEADER
+
+=================================== */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(11,31,58,.95);
+backdrop-filter:blur(8px);
+transition:.3s;
+
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:90px;
+
+}
+
+.logo{
+height: 250px;
+width: auto;
+left: 0
+top: 20px
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:30px;
+
+}
+
+nav a{
+
+color:white;
+font-weight:600;
+font-size:16px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--gold);
+
+}
+
+.header-buttons{
+
+display:flex;
+gap:15px;
+
+}
+
+.btn{
+
+padding:14px 20px;
+border-radius:50px;
+font-weight:700;
+transition:.3s;
+display:inline-block;
+
+}
+
+.btn-primary{
+
+background:var(--gold);
+color:white;
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-2px);
+
+}
+
+.btn-secondary{
+
+border:2px solid white;
+color:white;
+
+}
+
+.btn-secondary:hover{
+
+background:white;
+color:var(--navy);
+
+}
+
+/* ===================================
+
+HERO
+
+=================================== */
+
+.hero{
+
+position:relative;
+height:100vh;
+overflow:hidden;
+
+}
+
+.slide{
+
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:opacity 1s ease;
+
+}
+
+.slide.active{
+
+opacity:1;
+z-index:2;
+
+}
+
+.slide img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+.overlay{
+
+position:absolute;
+inset:0;
+background:linear-gradient(
+90deg,
+rgba(11,31,58,.82),
+rgba(11,31,58,.45),
+rgba(11,31,58,.25)
+);
+
+}
+
+.hero-content{
+
+position:absolute;
+z-index:5;
+top:50%;
+left:8%;
+transform:translateY(-50%);
+max-width:700px;
+color:white;
+
+}
+
+.hero-content h1{
+
+font-family:'Montserrat',sans-serif;
+font-size:64px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+font-size:22px;
+margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.hero-buttons a{
+
+min-width:220px;
+text-align:center;
+
+}
+
+.hero-arrow{
+
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:50px;
+color:white;
+cursor:pointer;
+padding:20px;
+z-index:10;
+background:rgba(255,255,255,.08);
+
+}
+
+.hero-arrow:hover{
+
+background:rgba(255,255,255,.2);
+
+}
+
+.prev{
+
+left:0;
+
+}
+
+.next{
+
+right:0;
+
+}
+
+.hero-dots{
+
+position:absolute;
+bottom:35px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:12px;
+z-index:15;
+
+}
+
+.dot{
+
+width:15px;
+height:15px;
+border-radius:50%;
+background:white;
+opacity:.5;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.dot.active{
+
+opacity:1;
+background:var(--gold);
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.header-buttons{
+
+display:none;
+
+}
+
+nav ul{
+
+gap:20px;
+
+}
+
+.hero-content{
+
+left:6%;
+right:6%;
+max-width:100%;
+
+}
+
+.hero-content h1{
+
+font-size:42px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+.hero{
+
+height:700px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container header-inner">
+
+<a href="#">
+
+<img src="images/title_logo.png" class="logo" alt="Cornerstone One Solutions">
+
+</a>
+
+<nav>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#industries">Industries</a></li>
+
+<li><a href="#careers">Careers</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="header-buttons">
+
+<a href="#request" class="btn btn-primary">Request Staffing</a>
+
+<a href="#careers" class="btn btn-secondary">Apply Now</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="slide active">
+
+<img src="images/staffing.png">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>Professional Staffing Solutions Built Around Your Business</h1>
+
+<p>
+Providing skilled personnel, workforce management,
+recruiting and staffing solutions across Georgia.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#request" class="btn btn-primary">
+Request Employees
+</a>
+
+<a href="#careers" class="btn btn-secondary">
+Find Jobs
+</a>
+
+</div>
+
+</div>
+
+</div>
+<!-- ==========================
+SLIDE 2
+========================== -->
+
+<div class="slide">
+
+    <img src="images/workforce.png" alt="Workforce Solutions">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>
+            Workforce Solutions That Drive Results
+        </h1>
+
+        <p>
+            From recruiting and onboarding to complete workforce management,
+            Cornerstone One Solutions delivers dependable staffing solutions
+            tailored to your business.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#services" class="btn btn-primary">
+                Explore Services
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================
+SLIDE 3
+========================== -->
+
+<div class="slide">
+
+    <img src="images/careers.png" alt="Career Opportunities">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>
+            Building Careers. Strengthening Businesses.
+        </h1>
+
+        <p>
+            Connecting qualified professionals with leading employers
+            throughout Georgia in construction, utilities,
+            manufacturing, warehousing, and administration.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#careers" class="btn btn-primary">
+                Apply Today
+            </a>
+
+            <a href="#request" class="btn btn-secondary">
+                Hire Talent
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================
+HERO CONTROLS
+========================== -->
+
+<div class="hero-arrow prev">
+
+&#10094;
+
+</div>
+
+<div class="hero-arrow next">
+
+&#10095;
+
+</div>
+
+
+<div class="hero-dots">
+
+<div class="dot active"></div>
+
+<div class="dot"></div>
+
+<div class="dot"></div>
+
+</div>
+
+
+<!-- ==========================
+SCROLL INDICATOR
+========================== -->
+
+<div class="scroll-down">
+
+<span></span>
+
+</div>
+
+</section> <!-- END HERO -->
+
+<!-- ===================================
+ABOUT SECTION
+=================================== -->
+
+<section id="about" style="padding:100px 0;background:#fff;">
+
+<div class="container">
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+
+<!-- LEFT IMAGE -->
+<div>
+<img src="images/title_logo_w.slogan.png" alt="About Cornerstone One Solutions" style="border-radius:12px;">
+</div>
+
+<!-- RIGHT CONTENT -->
+<div>
+
+<h2 style="font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:20px;">
+About Cornerstone One Solutions
+</h2>
+
+<p style="font-size:18px;color:#555;margin-bottom:20px;">
+Cornerstone One Solutions is a professional staffing and workforce management company dedicated to connecting skilled talent with leading employers across Georgia and surrounding regions.
+</p>
+
+<p style="font-size:18px;color:#555;margin-bottom:20px;">
+We specialize in utility staffing, construction labor, industrial workforce solutions, and administrative recruiting designed to keep operations running efficiently and safely.
+</p>
+
+<p style="font-size:18px;color:#555;">
+Our mission is to build reliable teams that drive productivity, safety, and long-term success for both clients and employees.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+SERVICES SECTION
+=================================== -->
+
+<section id="services" style="padding:100px 0;background:#f5f7fa;">
+
+<div class="container">
+
+<h2 style="text-align:center;font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:60px;">
+Our Services
+</h2>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px;">
+
+<!-- SERVICE 1 -->
+<div style="background:#fff;padding:35px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h3 style="color:var(--navy);font-size:22px;margin-bottom:15px;">Utility Staffing</h3>
+<p style="color:#666;">
+Skilled linemen, utility workers, and field crews for power, transmission, and distribution projects.
+</p>
+
+</div>
+
+<!-- SERVICE 2 -->
+<div style="background:#fff;padding:35px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h3 style="color:var(--navy);font-size:22px;margin-bottom:15px;">Construction Staffing</h3>
+<p style="color:#666;">
+Reliable general labor, skilled trades, and project support teams for construction companies.
+</p>
+
+</div>
+
+<!-- SERVICE 3 -->
+<div style="background:#fff;padding:35px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h3 style="color:var(--navy);font-size:22px;margin-bottom:15px;">Industrial Workforce</h3>
+<p style="color:#666;">
+Manufacturing, warehouse, and logistics staffing solutions tailored for high-demand operations.
+</p>
+
+</div>
+
+<!-- SERVICE 4 -->
+<div style="background:#fff;padding:35px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h3 style="color:var(--navy);font-size:22px;margin-bottom:15px;">Recruiting Services</h3>
+<p style="color:#666;">
+End-to-end recruiting for temporary, contract, and permanent workforce placements.
+</p>
+
+</div>
+
+<!-- SERVICE 5 -->
+<div style="background:#fff;padding:35px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h3 style="color:var(--navy);font-size:22px;margin-bottom:15px;">Workforce Management</h3>
+<p style="color:#666;">
+Scheduling, compliance, onboarding, and workforce optimization support.
+</p>
+
+</div>
+
+<!-- SERVICE 6 -->
+<div style="background:#fff;padding:35px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h3 style="color:var(--navy);font-size:22px;margin-bottom:15px;">On-Site Support</h3>
+<p style="color:#666;">
+Supervisors and field coordinators to ensure smooth project execution.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+INDUSTRIES SECTION
+=================================== -->
+
+<section id="industries" style="padding:100px 0;background:#fff;">
+
+<div class="container">
+
+<h2 style="text-align:center;font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:60px;">
+Industries We Serve
+</h2>
+
+<div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;">
+
+<span style="padding:12px 20px;background:#f5f7fa;border-radius:30px;color:#333;">Utilities & Power</span>
+<span style="padding:12px 20px;background:#f5f7fa;border-radius:30px;color:#333;">Electrical Construction</span>
+<span style="padding:12px 20px;background:#f5f7fa;border-radius:30px;color:#333;">Transmission & Distribution</span>
+<span style="padding:12px 20px;background:#f5f7fa;border-radius:30px;color:#333;">Manufacturing</span>
+<span style="padding:12px 20px;background:#f5f7fa;border-radius:30px;color:#333;">Warehousing</span>
+<span style="padding:12px 20px;background:#f5f7fa;border-radius:30px;color:#333;">Logistics</span>
+<span style="padding:12px 20px;background:#f5f7fa;border-radius:30px;color:#333;">Construction</span>
+<span style="padding:12px 20px;background:#f5f7fa;border-radius:30px;color:#333;">Administration</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+WHY CHOOSE US
+=================================== -->
+
+<section id="why" style="padding:100px 0;background:#f5f7fa;">
+
+<div class="container">
+
+<h2 style="text-align:center;font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:60px;">
+Why Choose Cornerstone One Solutions
+</h2>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px;">
+
+<!-- FEATURE -->
+<div style="background:#fff;padding:30px;border-radius:12px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+<h3 style="color:var(--navy);margin-bottom:10px;">Reliable Workforce</h3>
+<p style="color:#666;">Pre-screened, qualified professionals ready for deployment.</p>
+</div>
+
+<div style="background:#fff;padding:30px;border-radius:12px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+<h3 style="color:var(--navy);margin-bottom:10px;">Fast Placement</h3>
+<p style="color:#666;">Rapid staffing solutions to keep your projects on schedule.</p>
+</div>
+
+<div style="background:#fff;padding:30px;border-radius:12px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+<h3 style="color:var(--navy);margin-bottom:10px;">Industry Expertise</h3>
+<p style="color:#666;">Specialized in utility, construction, and industrial sectors.</p>
+</div>
+
+<div style="background:#fff;padding:30px;border-radius:12px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+<h3 style="color:var(--navy);margin-bottom:10px;">Safety First</h3>
+<p style="color:#666;">Strict compliance with OSHA and field safety standards.</p>
+</div>
+
+<div style="background:#fff;padding:30px;border-radius:12px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+<h3 style="color:var(--navy);margin-bottom:10px;">Scalable Solutions</h3>
+<p style="color:#666;">From small crews to large-scale workforce deployment.</p>
+</div>
+
+<div style="background:#fff;padding:30px;border-radius:12px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+<h3 style="color:var(--navy);margin-bottom:10px;">Dedicated Support</h3>
+<p style="color:#666;">Hands-on account management for every client.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================
+STATISTICS SECTION
+=================================== -->
+
+<section id="stats" style="padding:100px 0;background:var(--navy);color:#fff;">
+
+<div class="container">
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;">
+
+<div>
+<h2 style="font-size:48px;font-family:'Montserrat',sans-serif;" class="counter" data-target="2500">0</h2>
+<p>Workers Placed</p>
+</div>
+
+<div>
+<h2 style="font-size:48px;font-family:'Montserrat',sans-serif;" class="counter" data-target="350">0</h2>
+<p>Companies Served</p>
+</div>
+
+<div>
+<h2 style="font-size:48px;font-family:'Montserrat',sans-serif;" class="counter" data-target="12">0</h2>
+<p>Industries Covered</p>
+</div>
+
+<div>
+<h2 style="font-size:48px;font-family:'Montserrat',sans-serif;" class="counter" data-target="98">0</h2>
+<p>% Client Satisfaction</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+CORE VALUES SECTION
+=================================== -->
+
+<section id="values" style="padding:100px 0;background:#fff;">
+
+<div class="container">
+
+<h2 style="text-align:center;font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:60px;">
+Core Values
+</h2>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px;">
+
+<div style="padding:30px;background:#f5f7fa;border-radius:12px;">
+<h3 style="color:var(--navy);margin-bottom:10px;">Integrity</h3>
+<p>We operate with honesty, transparency, and accountability in every project.</p>
+</div>
+
+<div style="padding:30px;background:#f5f7fa;border-radius:12px;">
+<h3 style="color:var(--navy);margin-bottom:10px;">Safety</h3>
+<p>We prioritize safety standards to protect workers, clients, and job sites.</p>
+</div>
+
+<div style="padding:30px;background:#f5f7fa;border-radius:12px;">
+<h3 style="color:var(--navy);margin-bottom:10px;">Excellence</h3>
+<p>We deliver high-quality staffing solutions that exceed expectations.</p>
+</div>
+
+<div style="padding:30px;background:#f5f7fa;border-radius:12px;">
+<h3 style="color:var(--navy);margin-bottom:10px;">Reliability</h3>
+<p>Clients depend on us for consistent, on-time workforce delivery.</p>
+</div>
+
+<div style="padding:30px;background:#f5f7fa;border-radius:12px;">
+<h3 style="color:var(--navy);margin-bottom:10px;">Efficiency</h3>
+<p>We streamline hiring and placement to reduce downtime and costs.</p>
+</div>
+
+<div style="padding:30px;background:#f5f7fa;border-radius:12px;">
+<h3 style="color:var(--navy);margin-bottom:10px;">Growth</h3>
+<p>We build long-term partnerships that support business expansion.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+STAFFING REQUEST SECTION
+=================================== -->
+
+<section id="request" style="padding:100px 0;background:#f5f7fa;">
+
+<div class="container">
+
+<h2 style="text-align:center;font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:20px;">
+Request Staffing
+</h2>
+
+<p style="text-align:center;color:#666;margin-bottom:50px;">
+Submit your workforce needs and we will match qualified candidates quickly.
+</p>
+
+<form style="max-width:800px;margin:auto;background:#fff;padding:40px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+<input type="text" placeholder="Company Name" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+<input type="text" placeholder="Contact Person" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+
+<input type="email" placeholder="Email Address" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+<input type="tel" placeholder="Phone Number" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+
+<input type="text" placeholder="Job Location" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+<input type="text" placeholder="Number of Workers Needed" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+
+</div>
+
+<textarea placeholder="Describe the type of workers needed..." style="width:100%;margin-top:20px;padding:15px;border:1px solid #ddd;border-radius:8px;height:120px;"></textarea>
+
+<button type="submit" class="btn btn-primary" style="margin-top:20px;width:100%;border:none;cursor:pointer;">
+Submit Request
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+CAREERS SECTION
+=================================== -->
+
+<section id="careers" style="padding:100px 0;background:#fff;">
+
+<div class="container">
+
+<h2 style="text-align:center;font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:20px;">
+Careers
+</h2>
+
+<p style="text-align:center;color:#666;margin-bottom:50px;">
+Apply for open positions and upload your resume to join our workforce network.
+</p>
+
+<form style="max-width:800px;margin:auto;background:#f5f7fa;padding:40px;border-radius:12px;">
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+<input type="text" placeholder="Full Name" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+<input type="email" placeholder="Email Address" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+
+<input type="tel" placeholder="Phone Number" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+<input type="text" placeholder="Position Applying For" style="padding:15px;border:1px solid #ddd;border-radius:8px;">
+
+</div>
+
+<div style="margin-top:20px;">
+<label style="display:block;margin-bottom:10px;font-weight:600;">Upload Resume</label>
+<input type="file" style="padding:10px;">
+</div>
+
+<textarea placeholder="Brief summary of experience..." style="width:100%;margin-top:20px;padding:15px;border:1px solid #ddd;border-radius:8px;height:120px;"></textarea>
+
+<button type="submit" class="btn btn-primary" style="margin-top:20px;width:100%;border:none;cursor:pointer;">
+Submit Application
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ===================================
+CONTACT SECTION
+=================================== -->
+
+<section id="contact" style="padding:100px 0;background:#f5f7fa;">
+
+<div class="container">
+
+<h2 style="text-align:center;font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:20px;">
+Contact Us
+</h2>
+
+<p style="text-align:center;color:#666;margin-bottom:50px;">
+We’re here to help you build your workforce or start your career journey.
+</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;">
+
+<!-- CONTACT FORM -->
+<form style="background:#fff;padding:35px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<input type="text" placeholder="Full Name" style="width:100%;margin-bottom:15px;padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<input type="email" placeholder="Email Address" style="width:100%;margin-bottom:15px;padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<input type="text" placeholder="Subject" style="width:100%;margin-bottom:15px;padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<textarea placeholder="Message..." style="width:100%;height:140px;padding:14px;border:1px solid #ddd;border-radius:8px;margin-bottom:15px;"></textarea>
+
+<button class="btn btn-primary" style="width:100%;border:none;cursor:pointer;">
+Send Message
+</button>
+
+</form>
+
+<!-- CONTACT INFO -->
+<div style="background:var(--navy);color:#fff;padding:35px;border-radius:12px;">
+
+<h3 style="font-family:'Montserrat',sans-serif;margin-bottom:20px;">Get In Touch</h3>
+
+<p style="margin-bottom:10px;">📍 Smyrna, Georgia</p>
+<p style="margin-bottom:10px;">📞 (000) 000-0000</p>
+<p style="margin-bottom:10px;">✉ info@cornerstoneonesolutions.com</p>
+
+<hr style="margin:20px 0;opacity:.3;">
+
+<p style="line-height:1.7;">
+Professional staffing solutions for utility, construction,
+and industrial industries across Georgia and surrounding regions.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+FAQ SECTION (ACCORDION)
+=================================== -->
+
+<section id="faq" style="padding:100px 0;background:#fff;">
+
+<div class="container">
+
+<h2 style="text-align:center;font-family:'Montserrat',sans-serif;font-size:42px;color:var(--navy);margin-bottom:60px;">
+Frequently Asked Questions
+</h2>
+
+<div style="max-width:900px;margin:auto;">
+
+<!-- FAQ ITEM -->
+<div class="faq-item" style="margin-bottom:15px;border:1px solid #eee;border-radius:10px;overflow:hidden;">
+
+<div class="faq-question" style="padding:18px;background:#f5f7fa;cursor:pointer;font-weight:600;">
+What industries do you specialize in?
+</div>
+
+<div class="faq-answer" style="display:none;padding:18px;color:#666;">
+We specialize in utilities, construction, industrial staffing, warehousing, logistics, and administrative workforce solutions.
+</div>
+
+</div>
+
+<div class="faq-item" style="margin-bottom:15px;border:1px solid #eee;border-radius:10px;overflow:hidden;">
+
+<div class="faq-question" style="padding:18px;background:#f5f7fa;cursor:pointer;font-weight:600;">
+How fast can you provide workers?
+</div>
+
+<div class="faq-answer" style="display:none;padding:18px;color:#666;">
+Depending on requirements, we can provide qualified workers within 24–72 hours.
+</div>
+
+</div>
+
+<div class="faq-item" style="margin-bottom:15px;border:1px solid #eee;border-radius:10px;overflow:hidden;">
+
+<div class="faq-question" style="padding:18px;background:#f5f7fa;cursor:pointer;font-weight:600;">
+Do you offer long-term staffing?
+</div>
+
+<div class="faq-answer" style="display:none;padding:18px;color:#666;">
+Yes, we provide temporary, contract-to-hire, and long-term workforce solutions.
+</div>
+
+</div>
+
+<div class="faq-item" style="margin-bottom:15px;border:1px solid #eee;border-radius:10px;overflow:hidden;">
+
+<div class="faq-question" style="padding:18px;background:#f5f7fa;cursor:pointer;font-weight:600;">
+Are workers pre-screened?
+</div>
+
+<div class="faq-answer" style="display:none;padding:18px;color:#666;">
+Yes, all candidates go through background checks, skill verification, and compliance screening.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+FOOTER
+=================================== -->
+
+<footer style="background:var(--navy);color:#fff;padding:70px 0 30px 0;">
+
+<div class="container">
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:30px;">
+
+<!-- COLUMN 1 -->
+<div>
+<h3 style="margin-bottom:15px;">Cornerstone One Solutions</h3>
+<p style="color:#ccc;">
+Professional staffing and workforce solutions across Georgia.
+</p>
+</div>
+
+<!-- COLUMN 2 -->
+<div>
+<h4 style="margin-bottom:15px;">Quick Links</h4>
+<p><a href="#about" style="color:#ccc;">About</a></p>
+<p><a href="#services" style="color:#ccc;">Services</a></p>
+<p><a href="#careers" style="color:#ccc;">Careers</a></p>
+<p><a href="#contact" style="color:#ccc;">Contact</a></p>
+</div>
+
+<!-- COLUMN 3 -->
+<div>
+<h4 style="margin-bottom:15px;">Services</h4>
+<p style="color:#ccc;">Utility Staffing</p>
+<p style="color:#ccc;">Construction Staffing</p>
+<p style="color:#ccc;">Industrial Workforce</p>
+<p style="color:#ccc;">Recruiting</p>
+</div>
+
+<!-- COLUMN 4 -->
+<div>
+<h4 style="margin-bottom:15px;">Contact</h4>
+<p style="color:#ccc;">Smyrna, GA</p>
+<p style="color:#ccc;">info@cornerstoneonesolutions.com</p>
+<p style="color:#ccc;">(000) 000-0000</p>
+</div>
+
+</div>
+
+<hr style="margin:40px 0;opacity:.2;">
+
+<p style="text-align:center;color:#aaa;font-size:14px;">
+© 2026 Cornerstone One Solutions. All rights reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- ===================================
+MOBILE NAV IMPROVEMENT (CSS ONLY FIX)
+=================================== -->
+
+<style>
+@media(max-width:768px){
+
+nav ul{
+flex-direction:column;
+position:absolute;
+top:90px;
+left:0;
+width:100%;
+background:rgba(11,31,58,.98);
+padding:20px;
+display:none;
+}
+
+nav ul.active{
+display:flex;
+}
+
+}
+</style>
+
+<!-- ===================================
+PART 5 - JAVASCRIPT FUNCTIONALITY
+=================================== -->
+
+<script>
+
+/* ===================================
+SLIDESHOW
+=================================== */
+
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+let currentSlide = 0;
+
+function showSlide(index){
+
+slides.forEach((slide,i)=>{
+slide.classList.remove("active");
+dots[i].classList.remove("active");
+});
+
+slides[index].classList.add("active");
+dots[index].classList.add("active");
+
+currentSlide = index;
+
+}
+
+function nextSlide(){
+
+currentSlide++;
+if(currentSlide >= slides.length){
+currentSlide = 0;
+}
+showSlide(currentSlide);
+
+}
+
+function prevSlide(){
+
+currentSlide--;
+if(currentSlide < 0){
+currentSlide = slides.length - 1;
+}
+showSlide(currentSlide);
+
+}
+
+/* Auto-play slideshow */
+setInterval(nextSlide, 6000);
+
+/* Arrow controls */
+document.querySelector(".next").addEventListener("click", nextSlide);
+document.querySelector(".prev").addEventListener("click", prevSlide);
+
+/* Dot navigation */
+dots.forEach((dot,index)=>{
+dot.addEventListener("click",()=> showSlide(index));
+});
+
+
+/* ===================================
+COUNTER ANIMATION
+=================================== */
+
+let counters = document.querySelectorAll(".counter");
+
+let counterStarted = false;
+
+function runCounters(){
+
+counters.forEach(counter=>{
+
+let target = +counter.getAttribute("data-target");
+let count = 0;
+
+let speed = target / 120;
+
+function update(){
+
+count += speed;
+
+if(count < target){
+counter.innerText = Math.floor(count);
+requestAnimationFrame(update);
+}else{
+counter.innerText = target;
+}
+
+}
+
+update();
+
+});
+
+}
+
+/* Trigger counters when visible */
+window.addEventListener("scroll", ()=>{
+
+let statsSection = document.querySelector("#stats");
+
+if(!statsSection) return;
+
+let position = statsSection.getBoundingClientRect().top;
+
+if(position < window.innerHeight - 200 && !counterStarted){
+
+runCounters();
+counterStarted = true;
+
+}
+
+});
+
+
+/* ===================================
+FAQ ACCORDION
+=================================== */
+
+let faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item=>{
+
+let question = item.querySelector(".faq-question");
+let answer = item.querySelector(".faq-answer");
+
+question.addEventListener("click",()=>{
+
+let isOpen = answer.style.display === "block";
+
+faqItems.forEach(i=>{
+i.querySelector(".faq-answer").style.display = "none";
+});
+
+if(!isOpen){
+answer.style.display = "block";
+}
+
+});
+
+});
+
+
+/* ===================================
+MOBILE NAV TOGGLE (AUTO ADD BUTTON)
+=================================== */
+
+let nav = document.querySelector("nav");
+let navUl = document.querySelector("nav ul");
+
+/* Create mobile toggle button */
+let toggleBtn = document.createElement("div");
+toggleBtn.innerHTML = "☰";
+toggleBtn.style.fontSize = "28px";
+toggleBtn.style.color = "white";
+toggleBtn.style.cursor = "pointer";
+toggleBtn.style.display = "none";
+
+/* Insert into header */
+document.querySelector(".header-inner").appendChild(toggleBtn);
+
+/* Show toggle on mobile */
+function checkScreen(){
+
+if(window.innerWidth <= 768){
+toggleBtn.style.display = "block";
+}else{
+toggleBtn.style.display = "none";
+navUl.classList.remove("active");
+}
+
+}
+
+checkScreen();
+window.addEventListener("resize", checkScreen);
+
+/* Toggle menu */
+toggleBtn.addEventListener("click",()=>{
+
+navUl.classList.toggle("active");
+
+});
+
+
+/* ===================================
+SMOOTH SCROLL ENHANCEMENT
+=================================== */
+
+document.querySelectorAll("a[href^='#']").forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+let target = document.querySelector(this.getAttribute("href"));
+
+if(target){
+window.scrollTo({
+top: target.offsetTop - 80,
+behavior:"smooth"
+});
+}
+
+});
+
+});
+
+
+/* ===================================
+FORM UX POLISH (BASIC VALIDATION FEEDBACK)
+=================================== */
+
+document.querySelectorAll("form").forEach(form=>{
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let btn = this.querySelector("button");
+
+if(btn){
+btn.innerText = "Submitting...";
+btn.style.opacity = "0.7";
+btn.disabled = true;
+
+setTimeout(()=>{
+
+btn.innerText = "Submitted ✓";
+
+},1500);
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
